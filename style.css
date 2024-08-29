@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+:root{
+    --cor0:#DAFDBA;
+    --cor1:#9AEBA3 ;
+    --cor2:#45C4B0 ;
+    --cor3:#13678A;
+    --cor4:#012030;
+    --cor5:#009A00;
+    --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@keyframes fundo {
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+body{
+    /*background-image: url(imagewns/pexels-jplenio-1114897.jpg);*/                
+    background:linear-gradient(45deg,var(--cor1), var(--cor3), var(--cor4));
+    background-size: 300%  300%;
+    animation: fundo 6s ease infinite;
+}
+nav{
+    background-color:var(--cor1);
+    border: 5px groove lightblue;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
+}
+nav ol{
+    list-style: none;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-evenly;
+}
+nav ol li{
+    background-color: var(--cor4);
+    margin: 5px;
+    padding: 10px;
+}
+nav ol a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #00f7ff;
+}
+nav ol a:hover{
+    text-decoration: underline;
+}
+header h1{
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.568);
+    font-family: 'Matemasie' ,sans-serif, Courier New, Courier, monospace;
+    margin: 30px;
+    color: white;
+}
+form{
+    width: 600px;
+    height:auto;
+    margin: auto;
+    background-color: rgb(22, 78, 197);
+    color: var(--cor0);
+    box-shadow: 3px 3px 6px  rgba(0, 0, 0, 0.301);
+    border-radius: 10px 20px;
+
+}
+form fieldset legend{
+    margin: 0px 10px 0px 10px;
+    font-size: 1.1em;
+    text-shadow: var(--shadow);
+}
+form fieldset#info input{
+    padding: 20px;
+    border-style:solid ;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    width: 200px;
+}
+form  fieldset {
+    padding: 10px;
+}
+form label{
+    font-size: 1.1em;
+    text-shadow:var(--shadow) ;
+}
+form button{
+    display: block;
+    background: linear-gradient(45deg,var(--cor0),var(--cor4));
+    color: var(--cor4);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.548);
+    width:150px;
+    padding:10px;
+    margin:10px  auto;
+    font-size: 1.3em;
+}
+form button:hover{
+    transform: translate(2px,2px);
+    transition:  0.8s;
+}
+footer{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    background-color: rgb(22, 78, 197);
+    border-radius: 20px 20px  0px 0px;
+    margin-top: 50px;
+    height: 200px;
+}
