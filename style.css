@@ -6,24 +6,12 @@
     --cor2:#45C4B0 ;
     --cor3:#13678A;
     --cor4:#012030;
-    --cor5:#009A00;
     --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
 }
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-@keyframes fundo {
-    0%{
-        background-position:0% 50%;
-    }
-    50%{
-        background-position:100% 50%;
-    }
-    100%{
-        background-position:0% 50%;
-    }
 }
 body{
     /*background-image: url(imagewns/pexels-jplenio-1114897.jpg);*/                
@@ -32,8 +20,10 @@ body{
     animation: fundo 6s ease infinite;
 }
 nav{
-    background-color:var(--cor1);
-    border: 5px groove lightblue;
+    margin-top: 10px;
+    padding: 20px;
+    font-family: 'Matemasie', 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    background-color:var(--cor4);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
 }
 nav ol{
@@ -43,16 +33,19 @@ nav ol{
     justify-content: space-evenly;
 }
 nav ol li{
-    background-color: var(--cor4);
+    background-color: rgb(105, 96, 96);
+    border-radius: 10px;
     margin: 5px;
     padding: 10px;
 }
 nav ol a{
     text-decoration: none;
     text-transform: uppercase;
-    color: #00f7ff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.747);
+    color: #ffffff;
 }
 nav ol a:hover{
+    text-decoration-color:black ;
     text-decoration: underline;
 }
 header h1{
@@ -66,7 +59,7 @@ form{
     width: 600px;
     height:auto;
     margin: auto;
-    background-color: rgb(22, 78, 197);
+    background-color:#329485;
     color: var(--cor0);
     box-shadow: 3px 3px 6px  rgba(0, 0, 0, 0.301);
     border-radius: 10px 20px;
@@ -79,16 +72,19 @@ form fieldset legend{
 }
 form fieldset#info input{
     padding: 20px;
+    display: block;
+    margin: auto;
     border-style:solid ;
     border-radius: 20px;
     text-align: center;
     font-size: 1.1em;
-    width: 200px;
+    width: 300px;
 }
 form  fieldset {
     padding: 10px;
 }
-form label{
+form fieldset#info label{
+    display: none;
     font-size: 1.1em;
     text-shadow:var(--shadow) ;
 }
