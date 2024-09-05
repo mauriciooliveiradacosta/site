@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       fieldset{
+        width: 100%;
+       }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <a href="personagens.html">
+                <li>personagens</li>
+            </a>
+            <a href="historia.html">
+                <li>história</li>
+            </a>
+            <a href="">
+                <li>docs</li>
+            </a>
+        </ol>
+    </nav>
+    <div>
+        <form action="" method="post">
+            <fieldset id="info"><legend>informações do jogador</legend>
+                <p><input type="text" id="nome" placeholder="digite seu nome" autocomplete="none" required maxlength="8"><label for="nome"> :digite seu nome</label></p>
+                <p><input type="email" id="mail" placeholder="digite seu e-mail" required maxlength="24"><label for="mail"> :digite seu e-mail</label></p>
+                <p><input type="date" name="mês" id="imês"><label for="imês"> :data de nascimento</label></p>
+            </fieldset>
+            <fieldset id="sexo"><legend>sexo</legend>
+                    <input type="radio" name="sexo" id="masc">
+                    <label for="masc">masculino</label>
+                    <input type="radio" name="sexo" id="fem">
+                    <label for="fem">feminino</label>
+            </fieldset>
+            <fieldset id="est"><legend>estado</legend>
+                <select name="" id="">
+                    <option value="CE">Ceara</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="PR">Pará</option>
+                </select>
+            </fieldset>
+                <button type="submit">enviar</button>
+        </form>
+    </div>
+</body>
+</html>

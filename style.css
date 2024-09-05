@@ -20,7 +20,8 @@ body{
     animation: fundo 6s ease infinite;
 }
 nav{
-    margin-top: 10px;
+    width: 100%;
+    margin: 10px auto 30px auto;
     padding: 20px;
     font-family: 'Matemasie', 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
     background-color:var(--cor4);
@@ -52,11 +53,10 @@ header h1{
     text-align: center;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.568);
     font-family: 'Matemasie' ,sans-serif, Courier New, Courier, monospace;
-    margin: 30px;
+    margin-bottom: 15px;
     color: white;
 }
 form{
-    width: 600px;
     height:auto;
     margin: auto;
     background-color:#329485;
@@ -64,6 +64,17 @@ form{
     box-shadow: 3px 3px 6px  rgba(0, 0, 0, 0.301);
     border-radius: 10px 20px;
 
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: calc(50% - 80px);
+    height: 100%;
+   }
+form fieldset{
+    padding: 10px;
+    width: 90%;
+    margin: auto;
 }
 form fieldset legend{
     margin: 0px 10px 0px 10px;
@@ -79,9 +90,6 @@ form fieldset#info input{
     text-align: center;
     font-size: 1.1em;
     width: 300px;
-}
-form  fieldset {
-    padding: 10px;
 }
 form fieldset#info label{
     display: none;
@@ -103,13 +111,4 @@ form button{
 form button:hover{
     transform: translate(2px,2px);
     transition:  0.8s;
-}
-footer{
-    text-align: center;
-    font-size: 2em;
-    color: white;
-    background-color: rgb(22, 78, 197);
-    border-radius: 20px 20px  0px 0px;
-    margin-top: 50px;
-    height: 200px;
 }

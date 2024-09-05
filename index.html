@@ -10,13 +10,10 @@
 <body  >
     <nav>
         <ol>
-            <a href="index.html">
-                <li>principal</li>
-            </a>
             <a href="personagens.html">
                 <li>personagens</li>
             </a>
-            <a href="">
+            <a href="historia.html">
                 <li>história</li>
             </a>
             <a href="">
@@ -25,46 +22,23 @@
         </ol>
     </nav>
     <header>
-        <h1>um dia estranho</h1>
+        <h1>um dia</h1>
     </header>
     <main>
-        <form action="" method="post">  
-            <fieldset id="info"><legend>login</legend>
-                <input type="text" id="user" placeholder="usuário"><label for="user">usuário</label>
-                <input type="password" id="senha" placeholder="senha"><label for="senha">senha</label>
-            </fieldset>
-            <p>esqueci a senha</p>
-        </form>
-        <form action="" method="post">
-                <fieldset id="info"><legend>informações do jogador</legend>
-                    <p><input type="text" id="nome" placeholder="digite seu nome" autocomplete="none" required maxlength="8"><label for="nome"> :digite seu nome</label></p>
-                    <p><input type="email" id="mail" placeholder="digite seu e-mail" required maxlength="24"><label for="mail"> :digite seu e-mail</label></p>
-                    <p><input type="month" name="mês" id="imês"><label for="imês"> :data de nascimento</label></p>
+        <div>
+            <form action="" method="post">
+                <fieldset id="info"><legend>login</legend>
+                    <input type="text" id="user" placeholder="usuário"><label for="user">usuário</label>
+                    <input type="password" id="senha" placeholder="senha"><label for="senha">senha</label>
                 </fieldset>
-                <fieldset id="sexo"><legend>sexo</legend>
-                        <input type="radio" name="sexo" id="masc">
-                        <label for="masc">masculino</label>
-                        <input type="radio" name="sexo" id="fem">
-                        <label for="fem">feminino</label>
-                </fieldset>
-                <fieldset id="est"><legend>estado</legend>
-                    <select name="" id="">
-                        <option value="CE">Ceara</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="PR">Pará</option>
-                    </select>
-                </fieldset>
-                    <button type="submit">enviar</button>
-        </form>
+                <div>
+                    <a href="cadastro.html">cadastro</a>
+                    <a href="#" target="_blank" id="cad">esqueci a senha</a>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
-        equipe:
-        mauricio 
-        beatriz 
-        luiza 
-        isabelly
-        emanuel
-        israel
     </footer>
 </body>
 </html>
