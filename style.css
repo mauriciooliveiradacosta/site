@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+/*declarações das variáveis*/
 :root{
     --cor0:#DAFDBA;
     --cor1:#9AEBA3 ;
@@ -8,17 +9,20 @@
     --cor4:#012030;
     --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
 }
+/*configurações globais*/
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+/*plano de fundo*/
 body{
     /*background-image: url(imagewns/pexels-jplenio-1114897.jpg);*/                
     background:linear-gradient(45deg,var(--cor1), var(--cor3), var(--cor4));
     background-size: 300%  300%;
     animation: fundo 6s ease infinite;
 }
+/*configurações do menu*/
 nav{
     width: 100%;
     margin: 10px auto 30px auto;
@@ -27,6 +31,7 @@ nav{
     background-color:var(--cor4);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
 }
+/**/
 nav ol{
     list-style: none;
     display: flex;
@@ -39,6 +44,12 @@ nav ol li{
     margin: 5px;
     padding: 10px;
 }
+nav ol li:hover{
+    transition: 0.6s;
+    background-color: white;
+    color: black;
+
+}
 nav ol a{
     text-decoration: none;
     text-transform: uppercase;
@@ -46,8 +57,14 @@ nav ol a{
     color: #ffffff;
 }
 nav ol a:hover{
-    text-decoration-color:black ;
     text-decoration: underline;
+    text-decoration-color:black ;
+}
+div.itens ol li{
+    background-color: var(--cor2);
+}
+div.itens ol li:hover{
+   
 }
 header h1{
     text-align: center;
