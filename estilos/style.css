@@ -1,0 +1,185 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');/*"fonte:Protest Guerrilla"*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');/*fonte:"Roboto"*/
+
+/*declarações das variáveis*/
+:root{
+    --cor1:#000000;
+    --cor2: #1C1C1C;
+    --cor3:#8B0000;
+    --cor4:#4A5E3C;
+    --cor5:#C6A250;
+    --fonte1:'Roboto';
+    --fonte2:'Protest Guerrilla';
+    --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
+}
+/*configurações globais*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*plano de fundo*/
+body{             
+    background-image:url(../imagens/Designer.jpeg);
+    background-size:cover;
+    background-position:center 85%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/*configurações do menu*/
+nav{
+    margin-bottom:30px  ;
+    padding: 20px;
+    font-family:var(--fonte2), Franklin Gothic Medium, Arial Narrow, sans-serif;
+    background-color:#00043d;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
+}
+nav ol{
+    list-style: none;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-evenly;
+}
+nav ol li a{
+    background-color:var(--cor2);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 6px var(--cor5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.747);
+    color: #ffffff;
+}
+nav ol a:hover{
+    background-color: var(--cor3);
+    text-decoration: underline;
+    color: gray;
+    text-decoration-color:gray ;
+    transition: all 0.8s;
+}
+/*configurações dos itens escondidos*/
+li.caixa{
+    color: white;
+    text-transform: uppercase;
+}
+li.caixa:hover{
+    text-decoration: underline;
+    text-decoration-color:black ;
+}
+div.itens{
+    position: absolute;
+    display: none;
+    top: 45px;
+    left: 75%;
+}
+div.itens a{
+    display: block;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+}
+div.itens a:hover{
+background-color: #1C1C1C;
+color:#bd1414;
+}
+li.caixa:hover div.itens{
+    display: block;
+}
+/*título principal*/
+h1{
+    font-family: var(--fonte2), Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+    color:var(--cor5);
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    text-shadow: 2px 2px 6px var(--cor2);
+}
+/*fim do título principal*/
+/*configurações da div pai do formlário*/
+div#container{
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+}
+/*fim das configurações do pai*/
+
+/*configurações do formulário*/
+form{
+    height: 300px;
+    width: 400px;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    font-family: var(--fonte1),'Courier New', Courier, monospace;
+    border-radius: 20px;
+}
+form h2{
+    color: white;
+    text-align: center;
+    font-family: var(--fonte1);
+    font-size: 2em;
+}
+form div#dados input{
+    display: block;
+    margin: 5px auto ;
+    padding: 5px;
+    background-color: rgba(211, 211, 211, 0.658);
+    border: none;
+    text-align: center;
+    font-size: 1.1em;
+}
+input::target-text{
+    background-color: gray;
+}
+form div#dados input:hover{
+    background-color: gray;
+}
+input[type=date]{
+    width: 228px;
+}
+form div#dados label{
+    display: none;
+}
+form label,input[type=radio]{
+    color: white;
+}
+p{
+    text-align: center;
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.74);
+}
+form button{
+    display: block;
+    margin: 8px auto 0px auto;
+    padding: 10px;
+    width: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+}
+form button:hover{
+    cursor: pointer;
+}
+div#links{
+    margin: 50px auto;
+    background-color: #00000096;
+    width: 50%;
+}
+div#links a{
+    display: block;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.1em;
+    color: white;
+    text-shadow: 2px 3px 5px black;
+    text-decoration: none;
+}
+div#links a:hover{
+    text-decoration: underline;
+}
