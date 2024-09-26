@@ -31,7 +31,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
-/*configurações do body e plano de fundo*/
+/*plano de fundo*/
 body{             
     background-image:url(../imagens/Designer.jpeg);
     background-size:cover;
@@ -57,7 +57,6 @@ nav ol{
 }
 nav ol li a{
     background-color:var(--cor2);
-    color: #ffffff;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;
@@ -65,11 +64,12 @@ nav ol li a{
     text-transform: uppercase;
     box-shadow: 2px 2px 6px var(--cor5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.747);
+    color: #ffffff;
 }
 nav ol a:hover{
     background-color: var(--cor3);
-    color: gray;
     text-decoration: underline;
+    color: gray;
     text-decoration-color:gray ;
     transition: all 0.8s;
 }
@@ -83,8 +83,8 @@ li.caixa:hover{
     text-decoration-color:black ;
 }
 div.itens{
-    display: none;
     position: absolute;
+    display: none;
     top: 80px;
     left: 75%;
 }
@@ -105,8 +105,8 @@ li.caixa:hover div.itens{
 }
 /*título principal*/
 h1{
-    margin-top: 10px;
     font-family: var(--fonte3);
+    margin-top: 10px;
     font-size: 3em;
     color:var(--cor5);
     position: absolute;
@@ -117,86 +117,21 @@ h1{
 /*fim do título principal*/
 /*configurações da div pai do formlário*/
 div#container{
-    margin-top: 100px;
    display: flex;
    justify-content: center;
+   margin-top: 100px;
 }
 /*fim das configurações do pai*/
-
-/*configurações do formulário*/
-form{
+/*configurações das seções*/
+div#pai{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    margin: auto;
+}
+section{
+    width: 390px;
     height: 300px;
-    width: 400px;
-    background: transparent;
-    backdrop-filter: blur(4px);
-    font-family: var(--fonte1),'Courier New', Courier, monospace;
-    border-radius: 20px;
-}
-form h2{
-    color: white;
-    text-align: center;
-    font-family: var(--fonte1);
-    font-size: 2em;
-}
-/*configurações dos inputs*/
-form div#dados input{
-    display: block;
-    margin: 5px auto ;
-    padding: 5px;
-    background-color: rgba(211, 211, 211, 0.658);
-    border: none;
-    text-align: center;
-    font-size: 1.1em;
-}
-form div#dados input:hover{
-    background-color: gray;
-}
-input[type=date]{
-    width: 228px;
-}
-form div#dados label{
-    display: none;
-}
-form label,input[type=radio]{
-    color: white;
-}
-p{
-    text-align: center;
-}
-::placeholder{
-    color: rgba(0, 0, 0, 0.74);
-}
-/*botão do formulário*/
-form button{
-    display: block;
-    margin: 8px auto 0px auto;
-    padding: 10px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.699);
-    color: white;
-}
-form button:hover{
-    cursor: pointer;
-}
-/*configurações dos links abaixo do formulário*/
-div#links{
-    margin: 50px auto;
-    width: 50%;
-}
-div#links a{
-    display: block;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    font-size: 1.1em;
-    color: white;
-    text-shadow: 2px 3px 5px black;
-    text-decoration: none;
-    background-color: #00000096;
-    border-radius: 20px ;
-}
-div#links a:hover{
-    text-decoration: underline;
+    margin: 10px;
+    background-color: black;
 }
