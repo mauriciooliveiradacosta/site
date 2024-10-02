@@ -20,8 +20,8 @@
     --cor3:#8B0000;
     --cor4:#4A5E3C;
     --cor5:#C6A250;
-    --fonte1:'Roboto';
-    --fonte2:'Protest Guerrilla';
+    --fonte1:'Protest Guerrilla';
+    --fonte2:'Roboto';
     --fonte3:'square';
     --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
 }
@@ -43,13 +43,13 @@ body{
 nav{
     margin-bottom:30px  ;
     padding: 20px;
-    font-family:var(--fonte2), Franklin Gothic Medium, Arial Narrow, sans-serif;
-    background-color:#00043db2;
+    font-family:var(--fonte1), Franklin Gothic Medium, Arial Narrow, sans-serif;
+    background-color:rgba(0, 0, 0, 0.493);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
-    height: 120px;
+    height: 100px;
 }
 nav ol{
-    margin-top: 35px;
+    margin-top: 40px;
     list-style: none;
     display: flex;
     flex-flow:row nowrap;
@@ -114,10 +114,18 @@ h1{
     left: 10px;
     text-shadow: 2px 2px 6px var(--cor2);
 }
+h2{
+    color: white;
+    font-family: var(--fonte2);
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px var(--cor2);
+}
 /*fim do título principal*/
 /*configurações da div pai do formlário*/
 div#container{
-    margin-top: 100px;
+   margin-top:80px;
    display: flex;
    justify-content: center;
 }
@@ -129,22 +137,19 @@ form{
     width: 400px;
     background: transparent;
     backdrop-filter: blur(4px);
-    font-family: var(--fonte1),'Courier New', Courier, monospace;
+    font-family: var(--fonte2),'Courier New', Courier, monospace;
+    border: 2px groove white;
     border-radius: 20px;
-}
-form h2{
-    color: white;
-    text-align: center;
-    font-family: var(--fonte1);
-    font-size: 2em;
+    padding: 20px;
 }
 /*configurações dos inputs*/
 form div#dados input{
     display: block;
+    width: 228px;
     margin: 5px auto ;
     padding: 5px;
     background-color: rgba(211, 211, 211, 0.658);
-    border: none;
+    border: 1px solid white;
     text-align: center;
     font-size: 1.1em;
 }
@@ -161,28 +166,31 @@ form label,input[type=radio]{
     color: white;
 }
 p{
-    text-align: center;
+    width: 90px;
+    margin: auto;
+    text-align: left;
 }
 ::placeholder{
     color: rgba(0, 0, 0, 0.74);
 }
 /*botão do formulário*/
-form button{
+input#botao{
     display: block;
-    margin: 8px auto 0px auto;
+    margin: 14px auto 0px auto;
     padding: 10px;
     width: 80px;
     border-radius: 10px;
     border: none;
     background-color: rgba(0, 0, 0, 0.699);
     color: white;
+    font-size: 1.2em;
 }
-form button:hover{
+input#botao:hover{
     cursor: pointer;
 }
 /*configurações dos links abaixo do formulário*/
 div#links{
-    margin: 50px auto;
+    margin: 30px auto;
     width: 50%;
 }
 div#links a{
@@ -199,4 +207,23 @@ div#links a{
 }
 div#links a:hover{
     text-decoration: underline;
+}
+a#baixar{
+    background-color: #000000;
+    color: white;
+    border-radius: 20px;
+    display: block;
+    width: 200px;
+    padding: 30px;
+    margin: 40px auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--fonte4);
+    font-size: 1.4em;
+    transition: 0.8s;
+}
+a#baixar:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
 }

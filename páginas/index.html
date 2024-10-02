@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>divulgação</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="../estilos/style.css">
 </head>
 <body>
     <!--aqui são os itens do menu-->
@@ -35,9 +35,9 @@
                 <h2>login</h2>
                 <div id="dados">
                     <input type="email" id="user" placeholder="E-MAIL" required><label for="user">usuário</label>
-                    <input type="password" id="senha" placeholder="SENHA" required minlength="7"><label for="senha">senha</label>
-                    <button type="submit">login</button>
+                    <input type="password" id="senha" placeholder="SENHA" required minlength="4"><label for="senha">senha</label>
                 </div>
+                <input type="submit" value="enviar" id="botao" onclick="logar();return false">
                 <div id="links">
                     <a href="cadastro.html" target="_blank">cadastrar-se</a>
                     <a href="recuperar.html" target="_blank">esqueci a senha</a>
@@ -46,5 +46,6 @@
             <!-- fim do formulário-->
         </div> <!--fim da div pai-->
     <!-- rodapé do site -->
+     <script src="../main.js"></script>
 </body>
 </html>
