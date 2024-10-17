@@ -12,15 +12,6 @@
      -svg
     */
 }
-@keyframes shadow{
-
-    0%{
-        box-shadow: 0px 0px 6px white ;
-    }
-    100%{
-        box-shadow: 0px 0px 12px white;
-    }
-}
 /*declarações das variáveis*/
 :root{
     --cor1:#000000;
@@ -73,7 +64,7 @@ form{
     backdrop-filter: blur(4px);
     font-family: var(--fonte2),'Courier New', Courier, monospace;
     border-radius: 20px;
-    animation: shadow 4s alternate infinite;
+    box-shadow: 0px 0px 20px white;
 }
 
 /*configurações dos inputs*/
@@ -107,6 +98,18 @@ div#sexo p{
 ::placeholder{
     color: rgba(0, 0, 0, 0.74);
 }
+img#olho{
+    width: 20px;
+    position: absolute;
+    top: 165px;
+    right: 100px;
+}
+img#olho2{
+    width: 20px;
+    position: absolute;
+    top: 198px;
+    right: 100px;
+}
 /*botão de enviar do formulário*/
 input#botao{
     display: block;
@@ -122,7 +125,9 @@ input#botao{
     transition: 0.8s;
 }
 input#botao:hover{
-    box-shadow: none;
+    box-shadow: 0px 0px 12px var(--cor5);
+    background-color: var(--cor5);
+    color: var(--cor4);
     transform: translate(4px, 4px);
     cursor: pointer;
 }

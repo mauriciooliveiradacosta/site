@@ -1,17 +1,21 @@
-const form = document.getElementById('form').value.trim()
-var email = document.getElementById('mail').value.trim()
-var email2 =  document.getElementById('confirmarmail').value.trim()
-var senha = document.getElementById('senha').value.trim()
-var senha2 = document.getElementById('confirmarsenha').value.trim()
-var data = document.getElementById('dn').value.trim()
-var erro = document.querySelector('small')
-//a função trim() tira os espaços em brancos dos caracteres
 form.addEventListener('submit', (e) => { 
     e.preventDefault()  //cancela o comportamento padrão da página
-    validar()
 })
 function validar(){
-    if (email != email2){
-        small
+    const form = document.getElementById('form')
+    var nome = document.getElementById('nome')
+    var data = document.getElementById('dn')
+    var senha = document.getElementById('senha')
+    var vsenha = senha.value
+    var senha2 = document.getElementById('confirmarsenha')
+    var vsenha2 = senha2.value
+    var email = document.getElementById('mail')
+    var vsenha = senha.value.trim()  
+    //a função trim() tira os espaços em brancos dos caracteres          
+    if (vsenha != vsenha2){
+        alert('confira as senhas')
+    }else{
+        location.href = 'download.html'
     }
+    
 }

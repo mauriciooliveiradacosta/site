@@ -5,6 +5,25 @@
     padding: 0px;
     box-sizing: border-box;
 }
+/*fim das configurações globais*/
+
+
+
+/*declaração de variáveis*/
+:root{
+    --cor1:#000000;
+    --cor2: #1C1C1C;
+    --cor3:#8B0000;
+    --cor4:#4A5E3C;
+    --cor5:#C6A250;
+    --fonte1:'Protest Guerrilla';
+    --fonte2:'Roboto';
+    --fonte3:'square';
+    --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
+}
+/*fim da declaração de variáveis*/
+
+
 /*configurações do body e plano de fundo*/
 body{             
     background-image:url(../imagens/Designer.jpeg);
@@ -41,10 +60,10 @@ nav ol li a{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.747);
 }
 nav ol a:hover{
-    background-color: var(--cor3);
-    color: gray;
+    background-color: var(--cor5);
+    color: rgb(170, 160, 160);
     text-decoration: underline;
-    text-decoration-color:gray ;
+    text-decoration-color:rgb(187, 187, 187);
     transition: all 0.8s;
 }
 /*configurações dos itens escondidos*/
@@ -72,7 +91,7 @@ div.itens a{
 }
 div.itens a:hover{
 background-color: #1C1C1C;
-color:#bd1414;
+color:var(--cor5);
 }
 li.caixa:hover div.itens{
     display: block;
