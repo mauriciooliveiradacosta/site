@@ -104,12 +104,6 @@ img#olho{
     top: 165px;
     right: 100px;
 }
-img#olho2{
-    width: 20px;
-    position: absolute;
-    top: 198px;
-    right: 100px;
-}
 /*botão de enviar do formulário*/
 input#botao{
     display: block;

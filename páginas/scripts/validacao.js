@@ -12,10 +12,8 @@ function validar(){
     var email = document.getElementById('mail')
     var vsenha = senha.value.trim()  
     //a função trim() tira os espaços em brancos dos caracteres          
-    if (vsenha != vsenha2){
+    if (vsenha != vsenha2 ||  vsenha == '' || vsenha2 == '') {
         alert('confira as senhas')
-    }else{
-        location.href = 'download.html'
     }
     
 }
