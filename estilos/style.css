@@ -12,6 +12,8 @@
      -svg
     */
 }
+
+
 /*declarações das variáveis*/
 :root{
     --cor1:#000000;
@@ -24,7 +26,36 @@
     --fonte3:'square';
     --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
 }
-/*título principal*/
+/*fim da declaração de variáveis*/
+
+/*animações */
+@keyframes sombra {
+    to{
+        box-shadow:0px 0px 10px white 
+                    0px 0px 20px white
+                    0px 0px 30px white
+                    0px 0px 40px white;
+    }
+    from{
+        box-shadow:
+        0px 0px 40px white
+        0px 0px 30px white
+        0px 0px 20px white
+        0px 0px 10px white; 
+    }
+}
+/*configurações do body e plano de fundo*/
+body{             
+    background-image:url(../imagens/Designer.jpeg);
+    background-size:cover;
+    background-position:center 85%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/*fim das configurações do body e plano de fundo*/
+
+
+/*configurações do |título principal*/
 h1{
     margin-top: 10px;
     font-family: var(--fonte3);
@@ -35,6 +66,9 @@ h1{
     left: 10px;
     text-shadow: 2px 2px 6px var(--cor2);
 }
+/*fim das configurações do |título principal*/
+
+
 h2{
     color: white;
     font-family: var(--fonte2);
@@ -42,6 +76,7 @@ h2{
     text-align: center;
     text-transform: uppercase;
     text-shadow: 2px 2px 6px var(--cor2);
+    /*fim das configurações do |título principal*/
 }
 /*fim do título principal*/
 /*configurações da div pai do formlário*/
@@ -65,6 +100,10 @@ form{
     font-family: var(--fonte2),'Courier New', Courier, monospace;
     border-radius: 20px;
     box-shadow: 0px 0px 20px white;
+    animation-name:sombra;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
 }
 
 /*configurações dos inputs*/
@@ -102,7 +141,7 @@ img#olho{
     width: 20px;
     position: absolute;
     top: 165px;
-    right: 100px;
+    right: 25%;
 }
 /*botão de enviar do formulário*/
 input#botao{
@@ -128,7 +167,7 @@ input#botao:hover{
 /*configurações dos links abaixo do formulário*/
 div#links{
     margin: 30px auto;
-    width: 50%;
+    max-width: 200px;
 }
 div#links a{
     display: block;

@@ -24,19 +24,11 @@
 /*fim da declaração de variáveis*/
 
 
-/*configurações do body e plano de fundo*/
-body{             
-    background-image:url(../imagens/Designer.jpeg);
-    background-size:cover;
-    background-position:center 85%;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
 /*configurações do menu*/
 nav{
     margin-bottom:30px  ;
     padding: 20px;
-    font-family:var(--fonte1), Franklin Gothic Medium, Arial Narrow, sans-serif;
+    font-family:var(--fonte3);
     background-color:rgba(0, 0, 0, 0.493);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
     height: 100px;
