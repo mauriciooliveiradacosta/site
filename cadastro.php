@@ -1,3 +1,10 @@
+<?php 
+include('php/conexao.php');
+if(isset($_POST['submit'])){
+    $nome = $_POST['nome'];
+    $resultado = "INSERT INTO usuário(nome) VALUES ('$nome')";
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,11 +16,16 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media.css">
 </head>
+<style>
+    img#olho{
+        top: 167px;
+    }
+</style>
 <body>
     <nav>
         <ol>
             <li>
-                <a href="index.html">inicio</a>
+                <a href="index.php">inicio</a>
             </li>
             <li>
                 <a href="personagens.html">personagens</a>
@@ -33,11 +45,11 @@
         <form action="" method="post" id="form">
             <h2>cadastro</h2>
             <div id="dados">
-               <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="none" required minlength="6"><label
+               <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="none" required minlength="6"><label
                     for="nome"> :Digite seu nome</label>
-                    <input type="email" id="mail" placeholder="Digite seu e-mail" required maxlength="24"><label for="mail">
+                    <input type="email" name="email" id="mail" placeholder="Digite seu e-mail" required maxlength="24"><label for="mail">
                         :Digite seu e-mail</label>
-                <input type="date" id="dn" required><label for="dn">:data de nascimento</label>
+                <input type="date" name="datanasc" id="dn" required><label for="dn">:data de nascimento</label>
                     <input type="password" name="senha" id="senha" placeholder="digite sua senha" required>
                     <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()" >
                 <label for="senha">digite
@@ -51,10 +63,9 @@
                 <p><input type="radio" name="sexo" id="fem"><label for="fem">Feminino</label></p>
                 <p><input type="radio" name="sexo" id="outro"><label for="outro">outro</label></p>
             </div>
-            <input type="submit" value="enviar" id="botao" onclick="validar()">
+            <input type="submit" value="enviar" name="enviar" id="botao" >
         </form>
     </div>
-    <script src="scripts/validacao.js"></script>
     <script src="scripts/olho.js"></script>
 </body>
 

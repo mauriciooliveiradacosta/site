@@ -15,7 +15,7 @@ function validar(){
     if (vsenha != vsenha2 ||  vsenha == '' || vsenha2 == '') {
         alert('confira as senhas')
     }else{
-        location.href = '../download.html'
+        location.href = 'download.php'
     }
     
 }

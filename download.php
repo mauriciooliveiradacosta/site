@@ -1,17 +1,19 @@
+<?php 
+include('php/protect.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>divulgação</title>
-    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="estilos/menu.css">
     <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media.css">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
 </head>
 <body>
-    <!--aqui são os itens do menu-->
-    <nav>
+      <!--aqui são os itens do menu-->
+      <nav>
         <ol>
             <li>
                 <a href="index.html">inicio</a>
@@ -19,7 +21,7 @@
             <li>
                 <a href="personagens.html">personagens</a>
             </li>
-                <li class="caixa"><a href="#">docs</a>
+                <li class="caixa"><a href="">docs</a>
                     <div class="itens">
                         <a href="#">doc 1</a>
                         <a href="#">doc 2</a>
@@ -34,20 +36,14 @@
         <div id="container"> <!--div pai do formulário-->
             <!-- formulário-->
             <form action="" method="post">
-                <h2>login</h2>
-                <div id="dados">
-                    <input type="email" id="user" placeholder="E-MAIL" required><label for="user">usuário</label>
-                    <input type="password" id="senha" placeholder="SENHA" required minlength="4"><label for="senha">senha</label>
-                </div>
-                <input type="submit" value="enviar" id="botao" onclick="logar();return false">
-                <div id="links">
-                    <a href="cadastro.html" target="_self">cadastrar-se</a>
-                    <a href="recuperar.html" target="_self">esqueci a senha</a>
-                </div>
+                <h2>download</h2>
+                <a href="../executável.zip" download="../executável.zip" id="baixar">baixar</a>
             </form>
             <!-- fim do formulário-->
         </div> <!--fim da div pai-->
-    <!-- rodapé do site -->
-     <script src="scripts/main.js"></script><!--link para o arquivo javascript-->
+        <!-- rodapé do site -->
+        <div id="links">
+            <p><a href="logout.php">sair</a></p>
+        </div>
 </body>
 </html>

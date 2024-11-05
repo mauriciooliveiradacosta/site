@@ -1,0 +1,28 @@
+@charset "utf-8";
+div#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 90%;
+    min-height:500px;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+article.item{
+    position: relative;
+    height: 100%;
+    flex: 10%;
+}
+article.item img{
+    width: 200px;
+}
+figcaption{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+}

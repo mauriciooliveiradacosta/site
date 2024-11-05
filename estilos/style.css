@@ -1,19 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');/*"fonte:Protest Guerrilla"*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');/*fonte:"Roboto"*/
-@font-face {
-    font-family:'square' ;
-    src: url(../fonte/squaredance/SquaredanceFontV1-Regular.ttf) format('truetype');
-    /* tipos de format()
-     -opentype (otf)
-     - truetype(ttf)
-     -entedde-opentype
-     -truetype-aat ( apple advanced typography)
-     -svg
-    */
-}
-
-
 /*declarações das variáveis*/
 :root{
     --cor1:#000000;
@@ -23,30 +10,14 @@
     --cor5:#C6A250;
     --fonte1:'Protest Guerrilla';
     --fonte2:'Roboto';
-    --fonte3:'square';
     --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
 }
 /*fim da declaração de variáveis*/
 
-/*animações */
-@keyframes sombra {
-    to{
-        box-shadow:0px 0px 10px white 
-                    0px 0px 20px white
-                    0px 0px 30px white
-                    0px 0px 40px white;
-    }
-    from{
-        box-shadow:
-        0px 0px 40px white
-        0px 0px 30px white
-        0px 0px 20px white
-        0px 0px 10px white; 
-    }
-}
 /*configurações do body e plano de fundo*/
 body{             
     background-image:url(../imagens/Designer.jpeg);
+    background-attachment: fixed;
     background-size:cover;
     background-position:center 85%;
     background-repeat: no-repeat;
@@ -58,7 +29,7 @@ body{
 /*configurações do |título principal*/
 h1{
     margin-top: 10px;
-    font-family: var(--fonte3);
+    font-family: 'square';
     font-size: 3em;
     color:var(--cor5);
     position: absolute;
@@ -81,10 +52,10 @@ h2{
 /*fim do título principal*/
 /*configurações da div pai do formlário*/
 div#container{
-   margin-top:50px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    margin-top:8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*fim das configurações do pai*/
 
@@ -100,9 +71,7 @@ form{
     font-family: var(--fonte2),'Courier New', Courier, monospace;
     border-radius: 20px;
     box-shadow: 0px 0px 20px white;
-    animation-name:sombra;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation: sombra 5s infinite;
     
 }
 
@@ -140,7 +109,7 @@ div#sexo p{
 img#olho{
     width: 20px;
     position: absolute;
-    top: 165px;
+    top: 100px;
     right: 25%;
 }
 /*botão de enviar do formulário*/
@@ -160,7 +129,7 @@ input#botao{
 input#botao:hover{
     box-shadow: 0px 0px 12px var(--cor5);
     background-color: var(--cor5);
-    color: var(--cor4);
+    color:white;
     transform: translate(4px, 4px);
     cursor: pointer;
 }
