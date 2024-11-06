@@ -91,7 +91,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                 <h2>login</h2>
                 <!-- fim do titulo do formulário-->
                 <div id="dados">
-                    <input type="email" name="email" id="user" placeholder="E-MAIL" required><label for="user">usuário</label>
+                    <input type="email" name="email" id="email" placeholder="E-MAIL" autocomplete="off" required><label for="user">usuário</label>
                     <input type="password" name="senha" id="senha" placeholder="SENHA" required minlength="7"><label for="senha">senha</label>
                     <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
                 </div>

@@ -1,12 +1,6 @@
-<?php 
-include('php/conexao.php');
-if(isset($_POST['submit'])){
-    $nome = $_POST['nome'];
-    $resultado = "INSERT INTO usuário(nome) VALUES ('$nome')";
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +11,11 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="estilos/media.css">
 </head>
 <style>
-    img#olho{
-        top: 167px;
+    img#olho {
+        top: 132px;
     }
 </style>
+
 <body>
     <nav>
         <ol>
@@ -42,20 +37,20 @@ if(isset($_POST['submit'])){
         <h1>um dia</h1>
     </header>
     <div id="container">
-        <form action="" method="post" id="form">
+        <form action="php/cria_usuario.php" method="POST" id="form">
             <h2>cadastro</h2>
             <div id="dados">
-               <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="none" required minlength="6"><label
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="none" required minlength="6"><label
                     for="nome"> :Digite seu nome</label>
-                    <input type="email" name="email" id="mail" placeholder="Digite seu e-mail" required maxlength="24"><label for="mail">
-                        :Digite seu e-mail</label>
-                <input type="date" name="datanasc" id="dn" required><label for="dn">:data de nascimento</label>
-                    <input type="password" name="senha" id="senha" placeholder="digite sua senha" required>
-                    <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()" >
+                <input type="email" name="email" id="mail" placeholder="Digite seu e-mail" required maxlength="24"><label for="mail">
+                    :Digite seu e-mail</label>
+                <input type="password" name="senha" id="senha" placeholder="digite sua senha" required>
+                <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
                 <label for="senha">digite
                     sua senha</label>
                 <input type="password" name="senha" id="confirmarsenha" placeholder="repita sua senha" required><label for="confirmarsenha">digite
                     sua senha</label>
+                <input type="date" name="dn" id="dn" required><label for="dn">:data de nascimento</label>
             </div>
             <!-- inputs das opções de sexo-->
             <div id="sexo">
@@ -63,10 +58,27 @@ if(isset($_POST['submit'])){
                 <p><input type="radio" name="sexo" id="fem"><label for="fem">Feminino</label></p>
                 <p><input type="radio" name="sexo" id="outro"><label for="outro">outro</label></p>
             </div>
-            <input type="submit" value="enviar" name="enviar" id="botao" >
+            <input type="submit" value="enviar" name="enviar" id="botao" onclick="validar()">
         </form>
     </div>
-    <script src="scripts/olho.js"></script>
+    <script>
+         //cancela o comportamento padrão da página
+           var senha = document.getElementById('senha')
+           var senha2 = document.getElementById('confirmarsenha')
+        var imagen = document.getElementById('olho')
+        imagen.addEventListener('click', function olharsenha(){
+            if(senha.type === 'password'){
+                senha.type = 'text'
+                senha2.type = 'text'
+                imagen.src = 'imagens/eye-solid.svg'
+                }else{
+                    senha.type = 'password'
+                    senha2.type = 'password'
+                    imagen.src = 'imagens/eye-slash-regular.svg'
+                    }
+            
+        })
+    </script>
 </body>
 
 </html>
