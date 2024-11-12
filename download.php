@@ -37,7 +37,7 @@ include('php/protect.php');
             <!-- formulário-->
             <form action="" method="post">
                 <h2>download</h2>
-                <a href="../executável.zip" download="../executável.zip" id="baixar">baixar</a>
+                <a href="executável/" download="../executável.zip" id="baixar">baixar</a>
             </form>
             <!-- fim do formulário-->
         </div> <!--fim da div pai-->

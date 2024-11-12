@@ -23,7 +23,7 @@
                 <a href="index.php">inicio</a>
             </li>
             <li>
-                <a href="personagens.html">personagens</a>
+                <a href="personagens.html">catálogo</a>
             </li>
             <li class="caixa"><a href="">docs</a>
                 <div class="itens">
@@ -42,7 +42,7 @@
             <div id="dados">
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="none" required minlength="6"><label
                     for="nome"> :Digite seu nome</label>
-                <input type="email" name="email" id="mail" placeholder="Digite seu e-mail" required maxlength="24"><label for="mail">
+                <input type="email" name="email" id="mail" placeholder="Digite seu e-mail" required><label for="mail">
                     :Digite seu e-mail</label>
                 <input type="password" name="senha" id="senha" placeholder="digite sua senha" required>
                 <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
@@ -62,22 +62,33 @@
         </form>
     </div>
     <script>
-         //cancela o comportamento padrão da página
-           var senha = document.getElementById('senha')
-           var senha2 = document.getElementById('confirmarsenha')
+        form.addEventListener('submit', (e) => {
+            e.preventDefault() //cancela o comportamento padrão da página
+        })
+
+        var senha = document.getElementById('senha')
+        var senha2 = document.getElementById('confirmarsenha')
         var imagen = document.getElementById('olho')
-        imagen.addEventListener('click', function olharsenha(){
-            if(senha.type === 'password'){
+        imagen.addEventListener('click', function olharsenha() {
+            if (senha.type === 'password') {
                 senha.type = 'text'
                 senha2.type = 'text'
                 imagen.src = 'imagens/eye-solid.svg'
-                }else{
-                    senha.type = 'password'
-                    senha2.type = 'password'
-                    imagen.src = 'imagens/eye-slash-regular.svg'
-                    }
-            
+            } else {
+                senha.type = 'password'
+                senha2.type = 'password'
+                imagen.src = 'imagens/eye-slash-regular.svg'
+            }
+
         })
+
+        function validar() {
+            var senha = document.getElementById('senha').value.trim()
+            var senha2 = document.getElementById('confirmarsenha').value.trim()
+            if (senha != senha2) {
+                window.alert('confira as senhas')
+            }
+        }
     </script>
 </body>
 
