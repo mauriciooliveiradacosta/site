@@ -1,5 +1,10 @@
 <?php 
     require('conexao.php');
+    if(isset($_POST['senha'])){
+        if(strlen($_POST['senha']) < 7){
+            echo "a senha deve ter pelo menos 7 caracteres";
+        }
+    }
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];

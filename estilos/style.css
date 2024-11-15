@@ -1,46 +1,58 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');/*"fonte:Protest Guerrilla"*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');/*fonte:"Roboto"*/
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+/*"fonte:Protest Guerrilla"*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*fonte:"Roboto"*/
 /*declarações das variáveis*/
-:root{
-    --cor1:#000000;
+:root {
+    --cor1: #000000;
     --cor2: #1C1C1C;
-    --cor3:#8B0000;
-    --cor4:#4A5E3C;
-    --cor5:#C6A250;
-    --fonte1:'Protest Guerrilla';
-    --fonte2:'Roboto';
-    --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
+    --cor3: #8B0000;
+    --cor4: #4A5E3C;
+    --cor5: #C6A250;
+    --fonte1: 'Protest Guerrilla';
+    --fonte2: 'Roboto';
+    --shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
 }
+
 /*fim da declaração de variáveis*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 /*configurações do body e plano de fundo*/
-body{             
-    background-image:url(../imagens/Designer.jpeg);
+body {
+    background-image: url(../imagens/Designer.jpeg);
     background-attachment: fixed;
-    background-size:cover;
-    background-position:center 85%;
+    background-size: cover;
+    background-position: center 85%;
     background-repeat: no-repeat;
     height: 100vh;
 }
+
 /*fim das configurações do body e plano de fundo*/
 
 
-/*configurações do |título principal*/
-h1{
+/*configurações do título principal*/
+h1 {
     margin-top: 10px;
+    width: 300px;
     font-family: 'square';
     font-size: 3em;
-    color:var(--cor5);
+    color: var(--cor5);
     position: absolute;
     top: 0px;
     left: 10px;
     text-shadow: 2px 2px 6px var(--cor2);
 }
+
 /*fim das configurações do |título principal*/
 
 
-h2{
+h2 {
     color: white;
     font-family: var(--fonte2);
     font-size: 2em;
@@ -49,71 +61,79 @@ h2{
     text-shadow: 2px 2px 6px var(--cor2);
     /*fim das configurações do |título principal*/
 }
+
 /*fim do título principal*/
 /*configurações da div pai do formlário*/
-div#container{
-    margin-top:8%;
+div#container {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /*fim das configurações do pai*/
 
 /*configurações do formulário*/
-form{
+form {
     width: 400px;
-    min-height:307px;
+    min-height: 307px;
     max-height: max-content;
     display: block;
     padding: 20px;
-    background:transparent;
+    background: transparent;
     backdrop-filter: blur(4px);
-    font-family: var(--fonte2),'Courier New', Courier, monospace;
+    font-family: var(--fonte2), 'Courier New', Courier, monospace;
     border-radius: 20px;
     box-shadow: 0px 0px 20px white;
     animation: sombra 5s infinite;
-    
+
 }
 
 /*configurações dos inputs*/
-form div#dados label{
+form div#dados label {
     display: none;
 }
-form div#dados input{
-    clear: both;
+
+form div#dados input {
     display: block;
     width: 228px;
-    margin: 5px auto ;
+    margin: 10px auto;
     padding: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.644);
+    border: 3px solid rgba(0, 0, 0, 0.644);
     border-radius: 10px;
     text-align: center;
 }
-form div#dados input:focus{
-   background-color: gray;
+
+form div#dados input:focus {
+    background-color: gray;
     color: white;
 }
-input[type=date]{
+
+input[type=date] {
     width: 228px;
 }
-div#sexo{
+
+div#sexo {
     text-align: center;
 }
-div#sexo p{
+
+div#sexo p {
     display: inline-block;
     color: white;
 }
-::placeholder{
+
+::placeholder {
     color: rgba(0, 0, 0, 0.74);
 }
-img#olho{
+
+img#olho {
     width: 20px;
     position: absolute;
-    top: 100px;
     right: 25%;
 }
+
 /*botão de enviar do formulário*/
-input#botao{
+input#botao {
     display: block;
     margin: 14px auto 0px auto;
     padding: 10px;
@@ -126,19 +146,22 @@ input#botao{
     box-shadow: 4px 4px 0px white;
     transition: 0.8s;
 }
-input#botao:hover{
+
+input#botao:hover {
     box-shadow: 0px 0px 12px var(--cor5);
     background-color: var(--cor5);
-    color:white;
+    color: white;
     transform: translate(4px, 4px);
     cursor: pointer;
 }
+
 /*configurações dos links abaixo do formulário*/
-div#links{
+div#links {
     margin: 30px auto;
     max-width: 200px;
 }
-div#links a{
+
+div#links a {
     display: block;
     margin: 8px;
     padding: 5px;
@@ -149,15 +172,17 @@ div#links a{
     box-shadow: 2px 2px 0px white;
     text-decoration: none;
     background-color: #00000096;
-    border-radius: 20px ;
+    border-radius: 20px;
     transition: 0.8s;
 }
-div#links a:hover{
+
+div#links a:hover {
     box-shadow: none;
-    transform: translate(2px,2px);
+    transform: translate(2px, 2px);
     text-decoration: underline;
 }
-a#baixar{
+
+a#baixar {
     background-color: var(--cor5);
     color: var(--cor3);
     border-radius: 20px;
@@ -171,7 +196,8 @@ a#baixar{
     font-family: var(--fonte4);
     font-size: 1.4em;
 }
-a#baixar:hover{
+
+a#baixar:hover {
     background-color: var(--cor3);
     color: var(--cor5);
 }

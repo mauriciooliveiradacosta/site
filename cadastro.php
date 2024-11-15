@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastro</title>
-    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="estilos/menu.css">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media.css">
 </head>
 <style>
-    img#olho {
-        top: 132px;
+    img#olho{
+        top: 157px;
     }
 </style>
-
 <body>
     <nav>
         <ol>
@@ -23,7 +22,7 @@
                 <a href="index.php">inicio</a>
             </li>
             <li>
-                <a href="personagens.html">catálogo</a>
+                <a href="catalogo.php">catálogo</a>
             </li>
             <li class="caixa"><a href="">docs</a>
                 <div class="itens">
@@ -34,17 +33,17 @@
         </ol>
     </nav>
     <header>
-        <h1>um dia</h1>
+        <h1>one day</h1>
     </header>
     <div id="container">
         <form action="php/cria_usuario.php" method="POST" id="form">
             <h2>cadastro</h2>
             <div id="dados">
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="none" required minlength="6"><label
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="none" minlength="6"><label
                     for="nome"> :Digite seu nome</label>
                 <input type="email" name="email" id="mail" placeholder="Digite seu e-mail" required><label for="mail">
                     :Digite seu e-mail</label>
-                <input type="password" name="senha" id="senha" placeholder="digite sua senha" required>
+                <input type="password" name="senha" id="senha" placeholder="digite sua senha" required minlenght="7" autocomplete="off">
                 <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
                 <label for="senha">digite
                     sua senha</label>
@@ -62,9 +61,7 @@
         </form>
     </div>
     <script>
-        form.addEventListener('submit', (e) => {
-            e.preventDefault() //cancela o comportamento padrão da página
-        })
+       
 
         var senha = document.getElementById('senha')
         var senha2 = document.getElementById('confirmarsenha')

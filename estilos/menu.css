@@ -1,48 +1,26 @@
-@charset "utf-8";
-/*configurações globais*/
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
 }
-/*fim das configurações globais*/
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/*declarações das variáveis*/
-:root{
-    --cor1:#000000;
-    --cor2: #1C1C1C;
-    --cor3:#8B0000;
-    --cor4:#4A5E3C;
-    --cor5:#C6A250;
-    --fonte1:'Protest Guerrilla';
-    --fonte2:'Roboto';
-    --shadow:2px 2px 4px rgba(0, 0, 0, 0.596);
-}
-/*fim da declaração de variáveis*/
-
-h1{
+nav {
     font-family: "Cinzel", serif;
-
-}
-/*configurações do menu*/
-nav{
-    font-family: "Cinzel", serif;
-    font-weight:bold;
-    margin-bottom:30px  ;
+    font-weight: bold;
     padding: 20px;
-    background-color:rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.493);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
-    height: 100px;
+    height: 110px;
 }
-nav ol{
+
+nav ol {
     margin-top: 40px;
     list-style: none;
     display: flex;
-    flex-flow:row nowrap;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
 }
-nav ol  a{
-    background-color:var(--cor2);
+
+nav ol a {
+    background-color: var(--cor2);
     color: #ffffff;
     border-radius: 10px;
     margin: 5px;
@@ -52,29 +30,34 @@ nav ol  a{
     box-shadow: 2px 2px 6px var(--cor5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.747);
 }
-nav ol a:hover{
+
+nav ol a:hover {
     background-color: var(--cor5);
     color: black;
     text-decoration: underline;
-    text-decoration-color:black;
+    text-decoration-color: black;
     text-shadow: 0px 0px 5px aliceblue;
     transition: all 0.8s;
 }
+
 /*configurações dos itens escondidos*/
-li.caixa{
+li.caixa {
     color: white;
     text-transform: uppercase;
 }
-li.caixa:hover{
+
+li.caixa:hover {
     text-decoration: underline;
 }
-div.itens{
+
+div.itens {
     display: none;
     position: absolute;
     top: 80px;
-    left: 75%;
+    right:285px ;
 }
-div.itens a{
+
+div.itens a {
     display: block;
     margin: 0px;
     padding: 5px;
@@ -82,11 +65,13 @@ div.itens a{
     background-color: gray;
     color: white;
 }
-div.itens a:hover{
-background-color:var(--cor5) ;
-color:#1C1C1C;
-text-decoration-color: var(--cor5);
+
+div.itens a:hover {
+    background-color: var(--cor5);
+    color: #1C1C1C;
+    text-decoration-color: var(--cor5);
 }
-li.caixa:hover div.itens{
+
+.caixa:hover div.itens {
     display: block;
 }

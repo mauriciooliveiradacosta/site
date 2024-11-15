@@ -46,25 +46,27 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>divulgação</title>
-    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/png">
-    <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media.css">
+    <link rel="stylesheet" href="estilos/menu.css">
 </head>
 <style>
     img#olho{
-        top: 100px;
+        top: 116px;
     }
 </style>
-<body>
+<body onresize="mudoutamanho()">
+    <!--título principal-->
+    <h1>One Day</h1>
+    <!-- fim do titulo-->
     <!--aqui são os itens do menu-->
-    <nav>
+    <nav id="menu">
         <ol>
             <li>
                 <a href="index.php">inicio</a>
             </li>
             <li>
-                <a href="personagens.html">catálogo</a>
+                <a href="catalogo.php">catálogo</a>
             </li>
             <!-- itens escondidos (dropdown)-->
                 <li class="caixa"><a href="#">docs</a>
@@ -78,9 +80,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <!-- fim do menu-->
 
 
-   <!--título principal-->
-   <h1>um dia</h1>
-   <!-- fim do titulo-->
 
    
    <!--div pai do formulário-->
@@ -95,7 +94,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                     <input type="password" name="senha" id="senha" placeholder="SENHA" required minlength="7"><label for="senha">senha</label>
                     <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
                 </div>
-                <input type="submit" value="enviar" id="botao" onclick="logar();return false">
+                <input type="submit" value="enviar" id="botao">
                 <div id="links">
                     <a href="cadastro.php" target="_blank">cadastrar-se</a>
                     <a href="recuperar.html" target="_blank">esqueci a senha</a>
