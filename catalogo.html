@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +8,7 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/menu.css">
     <link rel="stylesheet" href="estilos/catalogo.css">
+    <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome -->
 </head>
 <style>
  .categorias{
@@ -16,27 +16,27 @@
  }
 </style>
 <body>
-    <nav>
-        <!--título principal-->
-        <h1>One Day</h1>
-        <!-- fim do titulo-->
+    <h1>One Day</h1>
+    <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
+    <!--aqui são os itens do menu-->
+    <nav id="menu">
         <ol>
-            <!--itens do menu-->
             <li>
                 <a href="index.php">inicio</a>
             </li>
             <li>
-                <a href="#">catálogo</a>
+                <a href="catalogo.php">catálogo</a>
             </li>
-            <li class="caixa"><a href="">docs</a>
+            <!-- itens escondidos (dropdown)-->
+            <li class="caixa"><a href="#">docs</a>
                 <div class="itens">
                     <a href="#">doc 1</a>
                     <a href="#">doc 2</a>
                 </div>
             </li>
-            <!-- fim dos itens do menu-->
         </ol>
     </nav>
+    <!-- fim do menu-->
     <ul class="categorias">
         <li class="ativo">todos</li>
         <li>cura</li>

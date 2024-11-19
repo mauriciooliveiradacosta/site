@@ -1,29 +1,30 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 nav {
     font-family: "Cinzel", serif;
     font-weight: bold;
-    padding: 20px;
     background-color: rgba(0, 0, 0, 0.493);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
     height: 110px;
+    display: block;
 }
-
-nav ol {
-    margin-top: 40px;
+nav ol{
     list-style: none;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
 }
 
 nav ol a {
+    text-align: center;
     background-color: var(--cor2);
     color: #ffffff;
     border-radius: 10px;
-    margin: 5px;
+    margin: 40px 5px 0px 0px ;
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -53,8 +54,8 @@ li.caixa:hover {
 div.itens {
     display: none;
     position: absolute;
-    top: 80px;
-    right:285px ;
+    top: 70px;
+    right:280px ;
 }
 
 div.itens a {

@@ -1,15 +1,14 @@
 <?php 
     require('conexao.php');
-    if(isset($_POST['senha'])){
-        if(strlen($_POST['senha']) < 7){
-            echo "a senha deve ter pelo menos 7 caracteres";
-        }
-    }
+    // declaração das variáveis para passar para o banco de dados
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $confima_senha = $_POST['confirma_senha'];
     $sexo = $_POST['sexo'];
-    if(isset($_POST)){
+
+    //validação das senhas e envio para o banco de dados
+    if(isset($_POST) && $senha == $confima_senha && strlen($senha) > 6) {
 
         $query = "INSERT INTO usuário (nome,email,senha,sexo) VALUES ('$nome','$email','$senha','$sexo')";
         $stmt = $mysqli->prepare($query);
@@ -17,7 +16,6 @@
         echo"
            <script>
            location.href = '../download.php'
-          </script>
-       ";
+          </script>";
         }
 ?>

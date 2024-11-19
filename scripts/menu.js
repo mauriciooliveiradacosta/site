@@ -1,6 +1,11 @@
-function mudoutamanho(){
-    document.getElementById('menu')
-    if(window.innerWidth >= 600){
-        menu.style.display = 'none'
+function menu(){
+    var menu =  document.getElementById("menu");
+    var icone = document.getElementById('icone')
+    if(menu.style.display ==  'block'){
+        menu.style.display = 'none';
+        icone.className = 'fa-solid fa-bars'
+    }else{
+        menu.style.display = 'block';
+        icone.className = 'fa-regular fa-x'
     }
 }

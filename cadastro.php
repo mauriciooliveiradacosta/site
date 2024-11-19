@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="estilos/menu.css">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media.css">
+    <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome -->
 </head>
 <style>
-    img#olho{
+    img#olho {
         top: 157px;
     }
 </style>
+
 <body>
-    <nav>
+    <h1>one day</h1>
+    <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
+    <!--aqui são os itens do menu-->
+    <nav id="menu">
         <ol>
             <li>
                 <a href="index.php">inicio</a>
@@ -24,17 +29,16 @@
             <li>
                 <a href="catalogo.php">catálogo</a>
             </li>
-            <li class="caixa"><a href="">docs</a>
+            <!-- itens escondidos (dropdown)-->
+            <li class="caixa"><a href="#">docs</a>
                 <div class="itens">
-                    <a href="">doc 1</a>
-                    <a href="">doc 2</a>
+                    <a href="#">doc 1</a>
+                    <a href="#">doc 2</a>
                 </div>
             </li>
         </ol>
     </nav>
-    <header>
-        <h1>one day</h1>
-    </header>
+    <!-- fim do menu-->
     <div id="container">
         <form action="php/cria_usuario.php" method="POST" id="form">
             <h2>cadastro</h2>
@@ -43,11 +47,11 @@
                     for="nome"> :Digite seu nome</label>
                 <input type="email" name="email" id="mail" placeholder="Digite seu e-mail" required><label for="mail">
                     :Digite seu e-mail</label>
-                <input type="password" name="senha" id="senha" placeholder="digite sua senha" required minlenght="7" autocomplete="off">
+                <input type="password" name="senha" id="senha" placeholder="digite sua senha" required minlength="7" autocomplete="off">
                 <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
                 <label for="senha">digite
                     sua senha</label>
-                <input type="password" name="senha" id="confirmarsenha" placeholder="repita sua senha" required><label for="confirmarsenha">digite
+                <input type="password" name="confirma_senha" id="confirmarsenha" placeholder="repita sua senha" required minlength="7"><label for="confirmarsenha">digite
                     sua senha</label>
                 <input type="date" name="dn" id="dn" required><label for="dn">:data de nascimento</label>
             </div>
@@ -61,8 +65,6 @@
         </form>
     </div>
     <script>
-       
-
         var senha = document.getElementById('senha')
         var senha2 = document.getElementById('confirmarsenha')
         var imagen = document.getElementById('olho')

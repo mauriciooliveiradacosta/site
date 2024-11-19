@@ -3,6 +3,11 @@
 /*"fonte:Protest Guerrilla"*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@font-face {
+    font-family: 'square';
+    src: url(../fonte/Square\ Game.otf) format('opentype');
+}
+
 /*fonte:"Roboto"*/
 /*declarações das variáveis*/
 :root {
@@ -13,6 +18,7 @@
     --cor5: #C6A250;
     --fonte1: 'Protest Guerrilla';
     --fonte2: 'Roboto';
+    --fonte3: 'square';
     --shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
 }
 
@@ -30,23 +36,35 @@ body {
     background-size: cover;
     background-position: center 85%;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
 /*fim das configurações do body e plano de fundo*/
 
+i#icone {
+    right: 30px;
+    top: 10px;
+    color: white;
+    font-size: 3em;
+    position: absolute;
 
+}
+i#icone:hover{
+    cursor:pointer;
+}
 /*configurações do título principal*/
 h1 {
-    margin-top: 10px;
-    width: 300px;
-    font-family: 'square';
-    font-size: 3em;
+    /* background-image: url(../imagens/h1img.jpeg);
+    background-size: cover;
+    background-position:100% 90%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    width: max-content;
+    font-size: 4em;
+    font-family: var(--fonte3);
     color: var(--cor5);
     position: absolute;
-    top: 0px;
-    left: 10px;
     text-shadow: 2px 2px 6px var(--cor2);
+    text-transform: uppercase;
 }
 
 /*fim das configurações do |título principal*/
@@ -65,6 +83,10 @@ h2 {
 /*fim do título principal*/
 /*configurações da div pai do formlário*/
 div#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 50px;
     display: flex;
     justify-content: center;
