@@ -47,5 +47,6 @@ include('php/protect.php');
         <div id="links">
             <p><a href="logout.php">sair</a></p>
         </div>
+        <script src="scripts/menu.js"></script>
 </body>
 </html>

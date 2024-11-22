@@ -19,9 +19,13 @@ ul li:hover{
     color: var(--cor5);
     cursor: pointer;
 }
+main{
+    display: block;
+    margin-top: 100px;
+}
 .consumiveis{
     display: flex;
-    margin: 50px auto;
+    margin: 200px auto;
     width: 60%;
     justify-content: space-between;
     flex-flow: row wrap;

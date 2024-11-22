@@ -9,7 +9,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.493);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
     height: 110px;
-    display: block;
+    display: none;
 }
 nav ol{
     list-style: none;
@@ -18,13 +18,14 @@ nav ol{
     align-items: center;
     height: 100%;
 }
-
+nav ol li{
+    margin-top: 40px;
+}
 nav ol a {
     text-align: center;
     background-color: var(--cor2);
     color: #ffffff;
     border-radius: 10px;
-    margin: 40px 5px 0px 0px ;
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -43,6 +44,7 @@ nav ol a:hover {
 
 /*configurações dos itens escondidos*/
 li.caixa {
+    position: relative;
     color: white;
     text-transform: uppercase;
 }
@@ -54,8 +56,8 @@ li.caixa:hover {
 div.itens {
     display: none;
     position: absolute;
-    top: 70px;
-    right:280px ;
+    top: 24px;
+    right:10% ;
 }
 
 div.itens a {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/menu.css">
     <link rel="stylesheet" href="estilos/catalogo.css">
+    <link rel="stylesheet" href="estilos/media.css">
     <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome -->
 </head>
 <style>
@@ -37,19 +38,21 @@
         </ol>
     </nav>
     <!-- fim do menu-->
-    <ul class="categorias">
-        <li class="ativo">todos</li>
-        <li>cura</li>
-        <li>livros</li>
-    </ul>
-    <div class="consumiveis">
-        <img src="imagens/item-de-cura.jpg" alt="item de cura" data-filter="cura"> 
-        <img src="imagens/item-de-cura-2.jpg" alt="" data-filter="cura">
-        <img src="imagens/livro1.jpg" alt="" data-filter="livros">
-        <img src="imagens/item-de-cura-3.jpg" alt="" data-filter="cura">
-        <img src="imagens/livro3.jpg" alt="" data-filter="livros">
-        <img src="imagens/livro2.jpg" alt="" data-filter="livros">
-    </div>
+    <main>
+        <ul class="categorias">
+            <li class="ativo">todos</li>
+            <li>cura</li>
+            <li>livros</li>
+        </ul>
+        <div class="consumiveis">
+            <img src="imagens/item-de-cura.jpg" alt="item de cura" data-filter="cura">
+            <img src="imagens/item-de-cura-2.jpg" alt="" data-filter="cura">
+            <img src="imagens/livro1.jpg" alt="" data-filter="livros">
+            <img src="imagens/item-de-cura-3.jpg" alt="" data-filter="cura">
+            <img src="imagens/livro3.jpg" alt="" data-filter="livros">
+            <img src="imagens/livro2.jpg" alt="" data-filter="livros">
+        </div>
+    </main>
             <script>
                 const liItem = document.querySelectorAll('ul.categorias li');
                 const imgItem = document.querySelectorAll('.consumiveis img');
@@ -72,6 +75,7 @@
                     }
                 });
             </script>
+            <script src="scripts/menu.js"></script>
 
 </body>
 

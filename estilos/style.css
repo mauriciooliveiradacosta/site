@@ -7,7 +7,17 @@
     font-family: 'square';
     src: url(../fonte/Square\ Game.otf) format('opentype');
 }
+@keyframes sombra {
+    0%{
+        box-shadow: 0px 0px 50px blue,
+                    0px 0px 50px white;
 
+    }
+    100%{
+        box-shadow: 0px 0px 50px white,
+                    0px 0px 50px blue;
+    }
+}
 /*fonte:"Roboto"*/
 /*declarações das variáveis*/
 :root {
@@ -96,7 +106,7 @@ div#container {
 /*fim das configurações do pai*/
 
 /*configurações do formulário*/
-form {
+form{
     width: 400px;
     min-height: 307px;
     max-height: max-content;
@@ -106,8 +116,7 @@ form {
     backdrop-filter: blur(4px);
     font-family: var(--fonte2), 'Courier New', Courier, monospace;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px white;
-    animation: sombra 5s infinite;
+    animation: sombra 3s linear infinite;
 
 }
 
