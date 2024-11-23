@@ -68,7 +68,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 <a href="index.php">inicio</a>
             </li>
             <li>
-                <a href="catalogo.php">catálogo</a>
+                <a href="catalogo.html">catálogo</a>
             </li>
             <!-- itens escondidos (dropdown)-->
             <li class="caixa"><a href="#">docs</a>

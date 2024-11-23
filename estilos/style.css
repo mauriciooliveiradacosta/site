@@ -73,6 +73,7 @@ h1 {
     font-family: var(--fonte3);
     color: var(--cor5);
     position: absolute;
+    top: 0px;
     text-shadow: 2px 2px 6px var(--cor2);
     text-transform: uppercase;
 }
@@ -86,7 +87,6 @@ h2 {
     font-size: 2em;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 2px 2px 6px var(--cor2);
     /*fim das configurações do |título principal*/
 }
 
@@ -188,8 +188,12 @@ input#botao:hover {
 
 /*configurações dos links abaixo do formulário*/
 div#links {
-    margin: 30px auto;
-    max-width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    margin: auto;
 }
 
 div#links a {
@@ -212,7 +216,11 @@ div#links a:hover {
     transform: translate(2px, 2px);
     text-decoration: underline;
 }
-
+p{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
 a#baixar {
     background-color: var(--cor5);
     color: var(--cor3);
@@ -226,6 +234,7 @@ a#baixar {
     text-decoration: none;
     font-family: var(--fonte4);
     font-size: 1.4em;
+    transition: 0.5s;
 }
 
 a#baixar:hover {

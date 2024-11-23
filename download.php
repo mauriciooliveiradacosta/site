@@ -13,22 +13,25 @@ include('php/protect.php');
     <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome -->
 </head>
 <body>
-      <!--aqui são os itens do menu-->
-      <h1>One Day</h1>
-      <nav>
+    <!--aqui são os itens do menu-->
+    <h1>One Day</h1>
+    <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
+    <!--aqui são os itens do menu-->
+    <nav id="menu">
         <ol>
             <li>
                 <a href="index.php">inicio</a>
             </li>
             <li>
-                <a href="catalogo.php">catálogo</a>
+                <a href="catalogo.html">catálogo</a>
             </li>
-                <li class="caixa"><a href="">docs</a>
-                    <div class="itens">
-                        <a href="#">doc 1</a>
-                        <a href="#">doc 2</a>
-                    </div>
-                </li>
+            <!-- itens escondidos (dropdown)-->
+            <li class="caixa"><a href="#">docs</a>
+                <div class="itens">
+                    <a href="#">doc 1</a>
+                    <a href="#">doc 2</a>
+                </div>
+            </li>
         </ol>
     </nav>
     <!-- fim do menu-->
@@ -45,7 +48,7 @@ include('php/protect.php');
         </div> <!--fim da div pai-->
         <!-- rodapé do site -->
         <div id="links">
-            <p><a href="logout.php">sair</a></p>
+            <p><a href="php/logout.php">sair</a></p>
         </div>
         <script src="scripts/menu.js"></script>
 </body>
