@@ -107,7 +107,7 @@ div#container {
 
 /*configurações do formulário*/
 form{
-    width: 400px;
+    width:800px;
     min-height: 307px;
     max-height: max-content;
     display: block;

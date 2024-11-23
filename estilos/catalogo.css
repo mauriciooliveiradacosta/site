@@ -1,13 +1,11 @@
-main{
-    margin-top: 100px;
-}
-ul{
+ul {
     display: flex;
     justify-content: space-around;
     color: white;
     margin-top: 40px;
 }
-ul li{
+
+ul li {
     list-style: none;
     margin: 10px;
     padding: 13px;
@@ -18,25 +16,34 @@ ul li{
     text-transform: uppercase;
     transition: 0.5s;
 }
-ul li:hover{
-    background-color:var(--cor2);
+
+ul li:hover {
+    background-color: var(--cor2);
     color: var(--cor5);
     cursor: pointer;
 }
-main{
+
+main {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
     display: block;
-    margin-top: 100px;
+    margin: auto;
+    width: 90%;
 }
-.consumiveis{
+
+.consumiveis {
     display: flex;
-    margin:70px auto;
-    width: 60%;
+    margin: auto;
+    width: 90%;
     justify-content: space-between;
     flex-flow: row wrap;
 }
-img{
+
+img {
     margin: 10px;
     width: 200px;
     border-radius: 20px;
-    filter:drop-shadow(0px 0px 8px black);
+    filter: drop-shadow(0px 0px 8px black);
 }
