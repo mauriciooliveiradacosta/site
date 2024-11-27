@@ -3,6 +3,20 @@
     padding: 0px;
     box-sizing: border-box;
 }
+i{
+    font-size: 3em;
+
+}
+i#icone {
+    right: 30px;
+    top: 10px;
+    color: white;
+    position: absolute;
+
+}
+i#icone:hover{
+    cursor:pointer;
+}
 nav {
     font-family: "Cinzel", serif;
     font-weight: bold;
@@ -10,6 +24,8 @@ nav {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.671);
     height: 110px;
     display: none;
+    transform: scale(0);
+    transition: all 0.5s ease;
 }
 nav ol{
     list-style: none;

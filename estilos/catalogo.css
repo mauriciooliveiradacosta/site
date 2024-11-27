@@ -29,7 +29,7 @@ main {
     left: 50%;
     transform: translate(-50%);
     display: block;
-    margin: auto;
+    margin: 40px auto;
     width: 90%;
 }
 

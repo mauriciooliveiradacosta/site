@@ -1,8 +1,8 @@
 @media screen and (max-width:550px) {
-    form{
-        width: 100%;
-    }
     .consumiveis{
         justify-content: center;
+    }
+    i#icone{
+        font-size: 2em;
     }
 }
