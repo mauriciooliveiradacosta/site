@@ -1,6 +1,6 @@
 <?php
 include('php/conexao.php');
-
+//verificação se os campos estão preenchidos
 if (isset($_POST['email']) || isset($_POST['senha'])) {
 
     if (strlen($_POST['email']) == 0) {
@@ -19,14 +19,13 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         if ($quantidade == 1) {
 
             $usuario = $sql_query->fetch_assoc();
-
+            //inicia a seção e verifica se o usuário está registrado
             if (!isset($_SESSION)) {
                 session_start();
             }
-
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
-
+            //tranfere o usuário para a página de download
             header("Location: download.php");
         } else {
             echo "
@@ -45,24 +44,25 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>divulgação</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/menu.css">
-    <link rel="stylesheet" href="estilos/media.css">
-    <link rel="stylesheet" href="estilos/footer.css">
-    <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome -->
+    <link rel="stylesheet" href="estilos/style.css"> <!-- link para o css padrão -->
+    <link rel="stylesheet" href="estilos/menu.css"> <!--link para o css do menu -->
+    <link rel="stylesheet" href="estilos/media.css"> <!-- link para o css responsivo -->
+    <link rel="stylesheet" href="estilos/footer.css"> <!-- link para o css do rodapé -->
+    <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome (icones) -->
 </head>
+<!-- configurações pontuais do css -->
 <style>
     img#olho {
-        top: 116px;
+        top: 120px;
     }
 </style>
 
-<body>
+<body onresize="mudouTamanho()">
     <!--título principal-->
-    <h1>One Day</h1>
+    <h1>Um Dia</h1>
     <!-- fim do titulo-->
-    <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
     <!--aqui são os itens do menu-->
+    <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
     <nav id="menu">
         <ol>
             <li>
@@ -75,23 +75,24 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             <li class="caixa"><a href="#">docs</a>
                 <div class="itens">
                     <a href="#">doc 1</a>
-                    <a href="#">doc 2</a>
                 </div>
             </li>
         </ol>
     </nav>
     <!-- fim do menu-->
 
-    <!--div pai do formulário-->
+    <!-- formulário-->
+
     <div id="container">
-        <!-- formulário-->
         <form action="" method="post">
             <!-- titulo do formulário-->
             <h2>login</h2>
             <!-- fim do titulo do formulário-->
             <div id="dados">
-                <input type="email" name="email" id="email" placeholder="E-MAIL" autocomplete="off" required><label for="email">usuário</label>
-                <input type="password" name="senha" id="senha" placeholder="SENHA" required minlength="7"><label for="senha">senha</label>
+                <input type="email" name="email" id="email" placeholder="E-MAIL" autocomplete="off" required><label
+                    for="email">usuário</label>
+                <input type="password" name="senha" id="senha" placeholder="SENHA" required minlength="7"><label
+                    for="senha">senha</label>
                 <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
             </div>
             <input type="submit" value="enviar" id="botao">
@@ -100,47 +101,45 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 <a href="recuperar.html" target="_blank">esqueci a senha</a>
             </div>
         </form>
-        <!-- fim do formulário-->
-
-        <!--fim da div pai-->
     </div>
-
+    </div>
+    <!-- fim do formulário-->
     <footer class="footer">
-    <div class="waves">
-      <div class="wave" id="wave1"></div>
-      <div class="wave" id="wave2"></div>
-      <div class="wave" id="wave3"></div>
-      <div class="wave" id="wave4"></div>
-    </div>
-    <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a></li>
-    </ul>
-    <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-
-    </ul>
-    <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
-  </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- rodapé do site -->
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <h3>Equipe:</h3>
+            <li class="menu__item"><a class="menu__link" href="#">Israel mendez</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Luiza alzira</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Maria Beatriz</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Jéssica</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Isabelly Freitas</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Emanuel</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Mauricio oliveira</a></li>
+        </ul>
+        <p>&copy;2024 Site desenvolvido por Mauricio Oliveira Da Costa </p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="scripts/menu.js"></script>
-
     <script>
         //código para fazer a funcionalidade de ver a senha
         var senha = document.getElementById('senha')

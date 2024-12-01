@@ -1,8 +1,27 @@
-@media screen and (max-width:550px) {
+@media screen and (max-width:720px) {
+    i#icone{
+        display: block;
+    }
+    nav{
+        background-color: rgba(0, 0, 0, 0.61);
+        height: 130px;
+    }
+    nav ol{
+        margin: 0px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    nav ol li{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:560px) {
     .consumiveis{
         justify-content: center;
     }
-    i#icone{
-        font-size: 2em;
+}
+@media screen and (max-width:340px){
+    img#olho{
+        right: 15%;
     }
 }

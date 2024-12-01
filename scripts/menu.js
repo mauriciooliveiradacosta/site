@@ -1,11 +1,22 @@
-function menu(){
-    var menu =  document.getElementById("menu");
+function mudouTamanho(){
+    var menu = document.getElementById("menu");
     var icone = document.getElementById('icone')
-    if(menu.style.display ==  'block'){
-        menu.style.display = 'none';
-        icone.className = 'fa-solid fa-bars'
+    if(window.innerWidth>= 753){
+        menu.style.scale = '1' 
+        icone.className = 'fa-regular fa-x'
     }else{
-        menu.style.display = 'block';
+        menu.style.scale = '0'
+        icone.className = 'fa-solid fa-bars'
+    }
+}
+function menu() {
+    var menu = document.getElementById("menu");
+    var icone = document.getElementById('icone')
+    if (menu.style.scale == '1') {
+        menu.style.scale = '0';
+        icone.className = 'fa-solid fa-bars'
+    } else {
+        menu.style.scale = '1';
         icone.className = 'fa-regular fa-x'
     }
 }
