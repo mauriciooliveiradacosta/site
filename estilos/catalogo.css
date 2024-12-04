@@ -30,7 +30,7 @@ main ul.categorias li {
     text-transform: uppercase;
     transition: 0.5s;
     cursor: pointer;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.733);
     color: black;
     border: 3px solid blue;
     box-shadow: 0px 0px 8px blue,
@@ -38,6 +38,7 @@ main ul.categorias li {
 }
 main ul.categorias li:hover{
     background-color: blue;
+    color: var(--cor5);
 }
 
 /* configuração para a categoria que for escolhida */
@@ -75,4 +76,12 @@ main ul.categorias li.ativo {
     width: 200px;
     height: 250px;
     border-radius: 20px;
+}
+div#links{
+    width: 90%;
+    transform:translate(0px);
+    position:static;
+}
+div#links a{
+    width:200px;
 }

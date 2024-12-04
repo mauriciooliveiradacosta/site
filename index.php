@@ -38,11 +38,10 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>divulgação</title>
+    <title>Um Dia</title>
     <link rel="stylesheet" href="estilos/style.css"> <!-- link para o css padrão -->
     <link rel="stylesheet" href="estilos/menu.css"> <!--link para o css do menu -->
     <link rel="stylesheet" href="estilos/media.css"> <!-- link para o css responsivo -->
@@ -55,6 +54,8 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <!--título principal-->
     <h1>Um Dia</h1>
     <!-- fim do titulo-->
+
+
     <!--aqui são os itens do menu-->
     <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
     <nav id="menu">
@@ -76,31 +77,32 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     </nav>
     <!-- fim do menu-->
 
+    
     <!-- formulário-->
-
     <div id="container">
         <form action="" method="post">
+
             <!-- titulo do formulário-->
+
             <h2>login</h2>
-            <!-- fim do titulo do formulário-->
             <div id="dados">
                 <input type="email" name="email" id="email" placeholder="E-MAIL" autocomplete="off" required><label
-                    for="email">usuário</label>
-                <div class="caixa">
+                    for="email">usuário</label> <!-- input de e-mail-->
+                <div class="caixa"> <!-- div criada para facilitar a responsividade da imagem de olho-->
                     <input type="password" name="senha" id="senha" placeholder="SENHA" required minlength="7"><label
-                        for="senha">senha</label>
-                    <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
+                        for="senha">senha</label> <!--input da senha-->
+                    <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()"> <!-- imagem de olho-->
                 </div>
             </div>
-            <input type="submit" value="enviar" id="botao">
+            <input type="submit" value="enviar" id="botao"> <!-- botão de enviar-->
             <div id="links">
-                <a href="cadastro.php" target="_blank">cadastrar-se</a>
-                <!-- <a href="recuperar.html" target="_blank">esqueci a senha</a> -->
+                <a href="cadastro.php" target="_blank">cadastrar-se</a> <!-- link para a página de cadastro-->
             </div>
         </form>
     </div>
-    </div>
     <!-- fim do formulário-->
+
+    <!-- inicio do footer  -->
     <footer class="footer">
         <div class="waves">
             <div class="wave" id="wave1"></div>
@@ -110,16 +112,13 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         </div>
         <ul class="social-icon">
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon> <!--icone do github-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon> <!--icone do linkedin-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon> <!-- icone do instagram-->
                 </a></li>
         </ul>
         <ul class="menu">
@@ -127,9 +126,9 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             <li class="menu__item"><a class="menu__link" href="#">Israel mendez</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Luiza alzira</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Maria Beatriz</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Jéssica</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Jéssica Bessa</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Isabelly Freitas</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Emanuel</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Emanuel Silva</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Mauricio oliveira</a></li>
         </ul>
         <p>&copy;2024 Site desenvolvido por Mauricio Oliveira Da Costa </p>
@@ -153,4 +152,5 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         })
     </script>
 </body>
+
 </html>

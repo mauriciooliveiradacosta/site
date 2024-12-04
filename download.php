@@ -8,7 +8,7 @@ include('php/protect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>divulgação</title>
+    <title>Um Dia</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="estilos/style.css"> <!-- link para o css padrão -->
     <link rel="stylesheet" href="estilos/menu.css"> <!--link para o css do menu -->
@@ -17,7 +17,16 @@ include('php/protect.php');
     <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome (icones) -->
 </head>
 <!-- configurações pontuais do css -->
-
+<style>
+    .footer{
+        bottom: -1000px;
+    }
+    @media screen and (max-width:500px) {
+        .footer{
+            bottom: -800px;
+        }
+    }
+</style>
 <body onresize="mudouTamanho()">
        <!--título principal-->
        <h1>Um Dia</h1>
@@ -54,7 +63,8 @@ include('php/protect.php');
     <div id="links">
         <p><a href="php/logout.php">sair</a></p>
     </div>
-    <footer class="footer">
+     <!-- inicio do footer  -->
+     <footer class="footer">
         <div class="waves">
             <div class="wave" id="wave1"></div>
             <div class="wave" id="wave2"></div>
@@ -63,26 +73,23 @@ include('php/protect.php');
         </div>
         <ul class="social-icon">
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon> <!--icone do github-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon> <!--icone do linkedin-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon> <!-- icone do instagram-->
                 </a></li>
         </ul>
         <ul class="menu">
-            <h3>Equipe:</h3>
+            <h3>Equipe de desenvolvimento do jogo:</h3>
             <li class="menu__item"><a class="menu__link" href="#">Israel mendez</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Luiza alzira</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Maria Beatriz</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Jéssica</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Jéssica Bessa</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Isabelly Freitas</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Emanuel</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Emanuel Silva</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Mauricio oliveira</a></li>
         </ul>
         <p>&copy;2024 Site desenvolvido por Mauricio Oliveira Da Costa </p>

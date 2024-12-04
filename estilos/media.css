@@ -2,6 +2,10 @@
     i#icone{
         display: block;
     }
+    h1{
+        width: 96%;
+        text-align:center;
+    }
     nav{
         scale: 0;
         background-color: rgba(0, 0, 0, 0.61);
@@ -21,10 +25,9 @@
 }
 @media screen and (max-width:370px){
     h1{
-        left: 0px;
         font-size: 4em;
     }
-    footer{
-        bottom: -500px;
+    .footer{
+        bottom: 0px;
     }
 }

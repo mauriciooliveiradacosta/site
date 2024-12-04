@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>divulgação</title>
+    <title>Um Dia</title>
     <link rel="stylesheet" href="estilos/style.css"> <!-- link para o css padrão -->
     <link rel="stylesheet" href="estilos/menu.css"> <!--link para o css do menu -->
     <link rel="stylesheet" href="estilos/catalogo.css"> <!--link para o css do catalogo -->
@@ -14,39 +14,30 @@
     <!-- link do font awesome (icones) -->
 </head>
 <!-- configurações pontuais do css -->
-<style>
-    footer{
-        bottom:-1300px;
-    }
-    @media screen and (max-width: 560px) {
-        foooter {
-            bottom: -2000px;
-        }
-    }
-</style>
+
 <body onresize="mudouTamanho()">
-        <!--título principal-->
-        <h1>Um Dia</h1>
-        <!-- fim do titulo-->
-        <!--aqui são os itens do menu-->
-        <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
-        <nav id="menu">
-            <ol>
-                <li>
-                    <a href="index.php">inicio</a>
-                </li>
-                <li>
-                    <a href="catalogo.html">catálogo</a>
-                </li>
-                <!-- itens escondidos (dropdown)-->
-                <li class="caixa"><a href="#">docs</a>
-                    <div class="itens">
-                        <a href="#">doc 1</a>
-                    </div>
-                </li>
-            </ol>
-        </nav>
-        <!-- fim do menu-->
+    <!--título principal-->
+    <h1>Um Dia</h1>
+    <!-- fim do titulo-->
+    <!--aqui são os itens do menu-->
+    <i class="fa-solid fa-bars" id="icone" onclick="menu()"></i>
+    <nav id="menu">
+        <ol>
+            <li>
+                <a href="index.php">inicio</a>
+            </li>
+            <li>
+                <a href="catalogo.html">catálogo</a>
+            </li>
+            <!-- itens escondidos (dropdown)-->
+            <li class="caixa"><a href="#">docs</a>
+                <div class="itens">
+                    <a href="#">doc 1</a>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <!-- fim do menu-->
     <main>
         <ul class="categorias">
             <li class="ativo">todos</li>
@@ -54,39 +45,16 @@
             <li>livros</li>
         </ul>
         <div class="consumiveis">
-            <img src="imagens/item-de-cura.jpg" alt="item de cura" data-filter="cura">
-            <img src="imagens/item-de-cura-2.jpg" alt="" data-filter="cura">
-            <img src="imagens/livro1.jpg" alt="" data-filter="livros">
-            <img src="imagens/item-de-cura-3.jpg" alt="" data-filter="cura">
-            <img src="imagens/livro3.jpg" alt="" data-filter="livros">
-            <img src="imagens/livro2.jpg" alt="" data-filter="livros">
+            <img src="imagens/imagen1.jpeg" alt="item de cura" data-filter="livros">
+            <img src="imagens/imagen2.jpeg" alt="" data-filter="livros">
+            <img src="imagens/imagen3.jpeg" alt="" data-filter="livros">
+            <img src="imagens/imagen4.jpeg" alt="" data-filter="livros">
         </div>
     </main>
     <div id="links">
         <p><a href="php/logout.php">sair</a></p>
     </div>
-    <script>
-        const liItem = document.querySelectorAll('ul.categorias li');
-        const imgItem = document.querySelectorAll('.consumiveis img');
-
-        liItem.forEach(li => {
-            li.onclick = function () {
-                //active
-                liItem.forEach(li => {
-                    li.className = "";
-                })
-                li.className = "ativo";
-                //Filter
-                const value = li.textContent;
-                imgItem.forEach(img => {
-                    img.style.display = 'none';
-                    if (img.getAttribute('data-filter') == value.toLowerCase() || value == "todos") {
-                        img.style.display = 'block';
-                    }
-                })
-            }
-        });
-    </script>
+    <!-- inicio do footer  -->
     <footer class="footer">
         <div class="waves">
             <div class="wave" id="wave1"></div>
@@ -95,36 +63,33 @@
             <div class="wave" id="wave4"></div>
         </div>
         <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/Israel-Mendes-git"
+                    target="_blank">
+                    <ion-icon name="logo-github"></ion-icon> <!--icone do github-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon> <!--icone do linkedin-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon> <!-- icone do instagram-->
                 </a></li>
         </ul>
         <ul class="menu">
-            <h3>Equipe:</h3>
+            <h3>Equipe de desenvolvimento do jogo:</h3>
             <li class="menu__item"><a class="menu__link" href="#">Israel mendez</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Luiza alzira</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Maria Beatriz</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Jéssica</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Jéssica Bessa</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Isabelly Freitas</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Emanuel</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Emanuel Silva</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Mauricio oliveira</a></li>
         </ul>
-        <div id="creditos">
-            <p>&copy;2024 Mauricio Oliveira Da Costa | Todos os direitos reservados</p>
-        </div>
+        <p>&copy;2024 Site desenvolvido por Mauricio Oliveira Da Costa </p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/catalogo.js"></script>
 
 </body>
 

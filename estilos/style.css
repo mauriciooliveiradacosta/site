@@ -57,7 +57,7 @@ body {
 /*configurações do título principal*/
 h1 {
   color: var(--cor5);
-  background-image:linear-gradient(45deg,#254fd8,#94F2D0,#1b57a5);
+  background-image:linear-gradient(45deg,#254fd8,#94F2D0,#1b57a5); 
   background-size: 400% 400%;
   animation: gradient 10s linear infinite;
   -webkit-background-clip: text;
@@ -66,8 +66,8 @@ h1 {
   font-size: 4.4em;
   font-family:var(--fonte1), serif;
   position: absolute;
-  left: 20px;
-  top: 20px;
+  top: 10px;
+  left: 10px;
   text-transform: uppercase;
 }
 /*fim das configurações do |título principal*/
@@ -198,7 +198,7 @@ div#links {
 
 div#links a {
   display: block;
-  margin: 15px;
+  margin: 15px auto;
   padding: 5px;
   text-align: center;
   font-size: 1.1em;

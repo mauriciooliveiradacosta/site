@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>divulgação</title>
+    <title>Um Dia</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="estilos/style.css"> <!-- link para o css padrão -->
     <link rel="stylesheet" href="estilos/menu.css"> <!--link para o css do menu -->
@@ -71,8 +71,8 @@
         var senha = document.getElementById('senha')
         var senha2 = document.getElementById('confirmarsenha')
         var imagen = document.getElementById('olho')
-        imagen.addEventListener('click', function olharsenha() {
-            if (senha.type === 'password') {
+        imagen.addEventListener('click', function olharsenha() { //função que será chamada semmpre que a imagem for clicada
+            if (senha.type === 'password') { //faz a troca de tipo dos inputs
                 senha.type = 'text'
                 senha2.type = 'text'
                 imagen.src = 'imagens/eye-solid.svg'
@@ -87,11 +87,12 @@
         function validar() {
             var senha = document.getElementById('senha').value.trim()
             var senha2 = document.getElementById('confirmarsenha').value.trim()
-            if (senha != senha2) {
+            if (senha != senha2) { //verifica se as senhas são iguais
                 window.alert('confira as senhas')
             }
         }
     </script>
+    <!-- inicio do footer  -->
     <footer class="footer">
         <div class="waves">
             <div class="wave" id="wave1"></div>
@@ -101,29 +102,26 @@
         </div>
         <ul class="social-icon">
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon> <!--icone do github-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon> <!--icone do linkedin-->
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon> <!-- icone do instagram-->
                 </a></li>
         </ul>
         <ul class="menu">
-            <h3>Equipe:</h3>
+            <h3>Equipe de desenvolvimento do jogo:</h3>
             <li class="menu__item"><a class="menu__link" href="#">Israel mendez</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Luiza alzira</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Maria Beatriz</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Jéssica</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Jéssica Bessa</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Isabelly Freitas</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Emanuel</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Emanuel Silva</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Mauricio oliveira</a></li>
         </ul>
-        <p>&copy;2024 Mauricio Oliveira Da Costa | Todos os direitos reservados</p>
+        <p>&copy;2024 Site desenvolvido por Mauricio Oliveira Da Costa </p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
