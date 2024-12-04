@@ -43,19 +43,13 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>divulgação</title>
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
     <link rel="stylesheet" href="estilos/style.css"> <!-- link para o css padrão -->
     <link rel="stylesheet" href="estilos/menu.css"> <!--link para o css do menu -->
     <link rel="stylesheet" href="estilos/media.css"> <!-- link para o css responsivo -->
     <link rel="stylesheet" href="estilos/footer.css"> <!-- link para o css do rodapé -->
-    <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script> <!-- link do font awesome (icones) -->
+    <script src="https://kit.fontawesome.com/cd17e1e6db.js" crossorigin="anonymous"></script>
+    <!-- link do font awesome (icones) -->
 </head>
-<!-- configurações pontuais do css -->
-<style>
-    img#olho {
-        top: 120px;
-    }
-</style>
 
 <body onresize="mudouTamanho()">
     <!--título principal-->
@@ -72,7 +66,8 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 <a href="catalogo.html">catálogo</a>
             </li>
             <!-- itens escondidos (dropdown)-->
-            <li class="caixa"><a href="#">docs</a>
+            <li class="caixa">
+                <a href="#">docs</a>
                 <div class="itens">
                     <a href="#">doc 1</a>
                 </div>
@@ -91,14 +86,16 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             <div id="dados">
                 <input type="email" name="email" id="email" placeholder="E-MAIL" autocomplete="off" required><label
                     for="email">usuário</label>
-                <input type="password" name="senha" id="senha" placeholder="SENHA" required minlength="7"><label
-                    for="senha">senha</label>
-                <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
+                <div class="caixa">
+                    <input type="password" name="senha" id="senha" placeholder="SENHA" required minlength="7"><label
+                        for="senha">senha</label>
+                    <img src="imagens/eye-slash-regular.svg" alt="olho" id="olho" onclick="olharsenha()">
+                </div>
             </div>
             <input type="submit" value="enviar" id="botao">
             <div id="links">
                 <a href="cadastro.php" target="_blank">cadastrar-se</a>
-                <a href="recuperar.html" target="_blank">esqueci a senha</a>
+                <!-- <a href="recuperar.html" target="_blank">esqueci a senha</a> -->
             </div>
         </form>
     </div>
@@ -126,7 +123,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 </a></li>
         </ul>
         <ul class="menu">
-            <h3>Equipe:</h3>
+            <h3>Equipe de desenvolvimento do jogo:</h3>
             <li class="menu__item"><a class="menu__link" href="#">Israel mendez</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Luiza alzira</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Maria Beatriz</a></li>
@@ -156,5 +153,4 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         })
     </script>
 </body>
-
 </html>

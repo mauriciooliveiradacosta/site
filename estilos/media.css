@@ -1,18 +1,17 @@
-@media screen and (max-width:720px) {
+@media screen and (max-width:690px) {
     i#icone{
         display: block;
     }
     nav{
+        scale: 0;
         background-color: rgba(0, 0, 0, 0.61);
+        margin: 0px;
         height: 130px;
+        padding-top: 80px;
     }
     nav ol{
-        margin: 0px;
-        justify-content: space-around;
-        align-items: center;
-    }
-    nav ol li{
-        margin-top: 40px;
+        padding-right: 0px;
+        justify-content: space-evenly;
     }
 }
 @media screen and (max-width:560px) {
@@ -20,8 +19,12 @@
         justify-content: center;
     }
 }
-@media screen and (max-width:340px){
-    img#olho{
-        right: 15%;
+@media screen and (max-width:370px){
+    h1{
+        left: 0px;
+        font-size: 4em;
+    }
+    footer{
+        bottom: -500px;
     }
 }

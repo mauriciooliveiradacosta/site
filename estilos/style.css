@@ -1,12 +1,10 @@
 @charset "utf-8";
-/*"fonte:Protest Guerrilla"*/
-@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
-/* fonte: 'Cinzel' */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
-/* familia de fonte baixada (fonte :'square') */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');/*"fonte:Protest Guerrilla"*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');/* fonte: 'Cinzel' */
+
 @font-face {
-  font-family: 'square';
-  src: url(../fonte/Square\ Game.otf) format('opentype');
+  src: url('../crang/Crang.ttf') format('OpenType');
+  font-family: 'Black';/* familia de fonte baixada (fonte :'square') */
 }
 /*animaçôes do site*/
 @keyframes gradient {
@@ -33,7 +31,7 @@
   --cor5: #C6A250;
   --fonte1: 'Protest Guerrilla';
   --fonte2: 'Roboto';
-  --fonte3: 'square';
+  --fonte3: 'Black';
   --shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
 }
 /*fim da declaração de variáveis*/
@@ -42,7 +40,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 
@@ -67,11 +64,10 @@ h1 {
   -webkit-text-fill-color: transparent;
   width: max-content;
   font-size: 4.4em;
-  font-weight: 900;
-  font-family:"Cinzel", serif;
+  font-family:var(--fonte1), serif;
   position: absolute;
   left: 20px;
-  top: 0px;
+  top: 20px;
   text-transform: uppercase;
 }
 /*fim das configurações do |título principal*/
@@ -153,12 +149,18 @@ div#sexo p {
 ::placeholder {
   color: rgba(0, 0, 0, 0.74);
 }
+/*configurações da div pai do input de senha*/
+div.caixa{
+  position: relative;
+  width: 228px;
+  margin: auto;
+}
 /* configurações do icone de olho */
 img#olho {
   position: absolute;
   width: 20px;
-  top: 115px;
-  right: 25%;
+  top:7px;
+  right: 10px;
 }
 
 /*botão de enviar do formulário*/
@@ -187,7 +189,7 @@ input#botao:hover {
 /*configurações dos links abaixo do formulário*/
 div#links {
   position: absolute;
-  bottom: 6px;
+  bottom: 30px;
   left: 50%;
   transform: translate(-50%);
   width: 200px;
@@ -196,7 +198,7 @@ div#links {
 
 div#links a {
   display: block;
-  margin: 8px;
+  margin: 15px;
   padding: 5px;
   text-align: center;
   font-size: 1.1em;
@@ -212,7 +214,6 @@ div#links a {
 div#links a:hover {
   box-shadow: none;
   transform: translate(2px, 2px);
-  text-decoration: underline;
 }
 /* configurações da div de download  */
 div#download{
